@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+// QUESTÃO 2 
+
+int segundos(int h, int m, int s){
+	int resultado;
+	resultado = s + (h * 3600) + (m * 60);
+	return resultado;
+}
+
+int main() {
+	setlocale(LC_ALL, "Portuguese_Brazil");
+	
+	int Hr, Mn, S, resultado;
+	
+	printf("\n ENTRE COM AS HORAS: ");
+	scanf("%d", &Hr);
+	
+	printf("\n ENTRE COM OS MINUTOS: ");
+	scanf("%d", &Mn);
+	
+	printf("\nENTRE COM OS SEGUNDOS: ");
+	scanf("%d", &S);
+
+	resultado = segundos(Hr, Mn, S);
+	
+	printf("O total de segundos é: %d", resultado);
+	
+	
+	
+}
